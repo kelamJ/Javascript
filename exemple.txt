@@ -13,3 +13,115 @@ function prevoirAge() {
 }
 
 prevoirAge();
+
+// Fonction anonyme
+
+// let fonctionAnonyme = function() {
+//     console.log('Je suis une fonction anonyme');
+// }
+//
+// fonctionAnonyme();
+
+// 2eme méthode
+// (function() { console.log('Je suis une fonction anonyme') })();
+
+//Exercice
+function abracadabra() {
+    prenom = prompt('Votre prénom');
+    nom = prompt('Votre nom');
+    age = prompt('Votre age');
+    alert('Sapristi ! On ne m\'avait pas prévenu que c\'était vous, '+ prenom + '! Euh... Je veux dire... Monsieur le grand magicien ' + nom + '! Cela fait déjà ' + age + ' ans que vous faites rayonner notre contrée !')
+}
+
+abracadabra();
+
+// Exercice avancé
+function calculerIMC(poids, taille) {
+
+    let tailleEnMetres = taille / 100;
+    let tailleCalculee = Math.pow(tailleEnMetres, 2)
+    let imc = poids / tailleCalculee;
+
+return imc;
+}
+
+let poids = prompt('Votre poids en kg ?');
+let taille = prompt('Votre taille en cm ?');
+
+alert(calculerIMC(poids, taille));
+
+// Les conditions
+let age = 17;
+
+if (age < 18) {
+    console.log("Vous êtes mineur");
+}
+else  if (age < 21) {
+    console.log("Vous êtes majeur en France")
+}
+else {
+    console.log("Vous êtes majeur partout a vous les casinos !")
+}
+
+//Condition switch
+let consommable = "chocolat";
+
+switch (consommable) {
+    case "courgette":
+    case "pomme de terre":
+    case "carotte":
+        console.log("Ceci est un légume");
+        break;
+
+        case "banane":
+            console.log("Ceci est un fruit");
+            break;
+
+    default:
+        console.log("Ceci n'est ni un fruit ni un légume");
+}
+
+// Plusieurs condition
+let gareDeDepart = ""
+let gareDeDestination = "Paris"
+let chauffeur = "";
+if (gareDeDepart != "" || gareDeDestination != "" && chauffeur != "") {
+    console.log("Le train va démarrer.");
+}
+else {
+    console.log("Le train ne va pas démarrer.");
+}
+
+// Valeur par défaut
+let gareDeDepart = ""
+let gareDeDestination = prompt("Ou souhaitez vous allez ?") || "Gare du nord";
+let chauffeur = "Julien";
+if ((gareDeDepart != "" || gareDeDestination != "") && chauffeur != "") {
+    alert("Le train va démarrer a destination de " + gareDeDestination + ".");
+}
+else {
+    alert("Le train ne va pas démarrer.");
+}
+
+// Condition ternaire
+// let x = 5;
+//
+// x > 3?console.log('x est supérieur a 3'):console.log('x est inférieur a 3')
+
+//     console.log("x est supérieur à 3");
+// }
+// else {
+//     console.log("x est inférieur à 3");
+// }
+
+// Boucle do while
+do {
+    var prenom = prompt("Quel est votre prénom?");
+} while(prenom == "" || prenom == null)
+
+alert("Bienvenue " + prenom + " !
+
+// Boucle for
+for (let i = 1; i < 5; i++) {
+    console.log('Ligne : ' + i);
+}
